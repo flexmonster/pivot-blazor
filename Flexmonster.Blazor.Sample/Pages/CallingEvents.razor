@@ -1,0 +1,194 @@
+﻿@page "/calling-events"
+<h3 class="title-one page-title">
+    Calling <a target="blank" class="title-link" href="https://www.flexmonster.com/api/events/?r=blz">Flexmonster events</a>
+</h3>
+
+<div class="description-blocks first-description-block">
+    <p>
+        Perform an action (for example, click on a grid cell) to trigger a <a class="title-link" target="blank"
+                                                                              href="https://www.flexmonster.com/api/events/?r=blz">Flexmonster event</a>
+        . Scroll down to the log output to see which events get triggered.
+    </p>
+</div>
+
+<ToggleButton ComponentTriggerFunction="@EventsSignerController"
+              LabelChecked="Events are tracked"
+              LabelUnchecked="Events are not tracked"
+              Id="eventsID" />
+
+<FlexmonsterComponent @ref="flexmonster"
+                      Report="@report"
+                      Toolbar=true
+                      Width="100%"
+                      Height=600>
+</FlexmonsterComponent>
+
+<div class="section">
+    <LogsList Title="Log output" @ref="logsList" Logs="@logs" />
+    <button class="button-red" @onclick="ClearLogs">Clear Log Output</button>
+</div>
+@code{
+    private FlexmonsterComponent flexmonster;
+    private LogsList logsList;
+    private List<Log> logs;
+    string report = "https://cdn.flexmonster.com/github/demo-report.json";
+
+    protected override void OnInitialized()
+    {
+        logs = new List<Log>();
+        base.OnInitialized();
+    }
+
+    public void ClearLogs()
+    {
+        logs.Clear();
+    }
+
+    public void EventsSignerController(bool isSigned)
+    {
+        if (isSigned)
+        {
+            SignOnAllEvents();
+        }
+        else
+        {
+            SignOffAllEvents();
+        }
+    }
+
+    void AfterChartDraw() { PrintLog("afterchartdraw"); }
+    void AfterGridDraw(GridDrawParams param) { PrintLog("aftergriddraw"); }
+    void BeforeGridDraw(GridDrawParams param) { PrintLog("beforegriddraw"); }
+    void BeforeToolbarCreated(object param) { PrintLog("beforetoolbarcreated"); }
+    void CellClick(CellData param) { PrintLog("cellclick"); }
+    void CellDoubleClick(CellData param) { PrintLog("celldoubleclick"); }
+    void ChartClick(ChartData param) { PrintLog("chartclick"); }
+    void DataChanged(DataChangedParams param) { PrintLog("datachanged"); }
+    void DataError(DataErrorParams param) { PrintLog("dataerror"); }
+    void DataFileCancelled() { PrintLog("datafilecancelled"); }
+    void DataLoaded() { PrintLog("dataloaded"); }
+    void DrillthroughClose() { PrintLog("drillthroughclose"); }
+    void DrillthroughOpen(object param) { PrintLog("drillthroughopen"); }
+    void ExportComplete() { PrintLog("exportcomplete"); }
+    void ExportStart() { PrintLog("exportstart"); }
+    void FieldsListClose() { PrintLog("fieldslistclose"); }
+    void FieldsListOpen() { PrintLog("fieldslistopen"); }
+    void FilterClose() { PrintLog("filterclose"); }
+    void FilterOpen(FilterOpenParams param) { PrintLog("filteropen"); }
+    void LoadingData() { PrintLog("loadingdata"); }
+    void LoadingLocalization() { PrintLog("loadinglocalization"); }
+    void LoadingOLAPStructure() { PrintLog("loadingolapstructure"); }
+    void LoadingReportFile() { PrintLog("loadingreportfile"); }
+    void LocalizationError() { PrintLog("localizationerror"); }
+    void LocalizationLoaded() { PrintLog("localizationloaded"); }
+    void OLAPStructureError() { PrintLog("olapstructureerror"); }
+    void OLAPStructureLoaded() { PrintLog("olapstructureloaded"); }
+    void OpeningReportFile() { PrintLog("openingreportfile"); }
+    void PrintComplete() { PrintLog("printcomplete"); }
+    void PrintStart() { PrintLog("printstart"); }
+    void QueryComplete() { PrintLog("querycomplete"); }
+    void QueryError() { PrintLog("queryerror"); }
+    void Ready() { PrintLog("ready"); }
+    void ReportChange() { PrintLog("reportchange"); }
+    void ReportComplete() { PrintLog("reportcomplete"); }
+    void ReportFileCancelled() { PrintLog("reportfilecancelled"); }
+    void ReportFileError() { PrintLog("reportfileerror"); }
+    void RunningQuery() { PrintLog("runningquery"); }
+    void Update() { PrintLog("update"); }
+
+
+
+    public void SignOffAllEvents()
+    {
+        flexmonster.OnAfterChartDrawEvent -= AfterChartDraw;
+        flexmonster.OnAfterGridDrawEvent -= AfterGridDraw;
+        flexmonster.OnBeforeGridDrawEvent -= BeforeGridDraw;
+        flexmonster.OnBeforeToolbarCreatedEvent -= BeforeToolbarCreated;
+        flexmonster.OnCellClickEvent -= CellClick;
+        flexmonster.OnCellDoubleClickEvent -= CellDoubleClick;
+        flexmonster.OnChartClickEvent -= ChartClick;
+        flexmonster.OnDataChangedEvent -= DataChanged;
+        flexmonster.OnDataErrorEvent -= DataError;
+        flexmonster.OnDataFileCancelledEvent -= DataFileCancelled;
+        flexmonster.OnDataLoadedEvent -= DataLoaded;
+        flexmonster.OnDrillthroughCloseEvent -= DrillthroughClose;
+        flexmonster.OnDrillthroughOpenEvent -= DrillthroughOpen;
+        flexmonster.OnExportCompleteEvent -= ExportComplete;
+        flexmonster.OnExportStartEvent -= ExportStart;
+        flexmonster.OnFieldsListCloseEvent -= FieldsListClose;
+        flexmonster.OnFieldsListOpenEvent -= FieldsListOpen;
+        flexmonster.OnFilterCloseEvent -= FilterClose;
+        flexmonster.OnFilterOpenEvent -= FilterOpen;
+        flexmonster.OnLoadingDataEvent -= LoadingData;
+        flexmonster.OnLoadingLocalizationEvent -= LoadingLocalization;
+        flexmonster.OnLoadingOLAPStructureEvent -= LoadingOLAPStructure;
+        flexmonster.OnLoadingReportFileEvent -= LoadingReportFile;
+        flexmonster.OnLocalizationErrorEvent -= LocalizationError;
+        flexmonster.OnLocalizationLoadedEvent -= LocalizationLoaded;
+        flexmonster.OnOLAPStructureErrorEvent -= OLAPStructureError;
+        flexmonster.OnOLAPStructureLoadedEvent -= OLAPStructureLoaded;
+        flexmonster.OnOpeningReportFileEvent -= OpeningReportFile;
+        flexmonster.OnPrintCompleteEvent -= PrintComplete;
+        flexmonster.OnPrintStartEvent -= PrintStart;
+        flexmonster.OnQueryCompleteEvent -= QueryComplete;
+        flexmonster.OnQueryErrorEvent -= QueryError;
+        flexmonster.OnReadyEvent -= Ready;
+        flexmonster.OnReportChangeEvent -= ReportChange;
+        flexmonster.OnReportCompleteEvent -= ReportComplete;
+        flexmonster.OnReportFileCancelledEvent -= ReportFileCancelled;
+        flexmonster.OnReportFileErrorEvent -= ReportFileError;
+        flexmonster.OnRunningQueryEvent -= RunningQuery;
+        flexmonster.OnUpdateEvent -= Update;
+    }
+
+
+
+    public void PrintLog(string eventName)
+    {
+        logs.Add(new Log() { Date = DateTime.Now, Event = eventName });
+        StateHasChanged();
+    }
+
+    public void SignOnAllEvents()
+    {
+        flexmonster.OnAfterChartDrawEvent += AfterChartDraw;
+        flexmonster.OnAfterGridDrawEvent += AfterGridDraw;
+        flexmonster.OnBeforeGridDrawEvent += BeforeGridDraw;
+        flexmonster.OnBeforeToolbarCreatedEvent += BeforeToolbarCreated;
+        flexmonster.OnCellClickEvent += CellClick;
+        flexmonster.OnCellDoubleClickEvent += CellDoubleClick;
+        flexmonster.OnChartClickEvent += ChartClick;
+        flexmonster.OnDataChangedEvent += DataChanged;
+        flexmonster.OnDataErrorEvent += DataError;
+        flexmonster.OnDataFileCancelledEvent += DataFileCancelled;
+        flexmonster.OnDataLoadedEvent += DataLoaded;
+        flexmonster.OnDrillthroughCloseEvent += DrillthroughClose;
+        flexmonster.OnDrillthroughOpenEvent += DrillthroughOpen;
+        flexmonster.OnExportCompleteEvent += ExportComplete;
+        flexmonster.OnExportStartEvent += ExportStart;
+        flexmonster.OnFieldsListCloseEvent += FieldsListClose;
+        flexmonster.OnFieldsListOpenEvent += FieldsListOpen;
+        flexmonster.OnFilterCloseEvent += FilterClose;
+        flexmonster.OnFilterOpenEvent += FilterOpen;
+        flexmonster.OnLoadingDataEvent += LoadingData;
+        flexmonster.OnLoadingLocalizationEvent += LoadingLocalization;
+        flexmonster.OnLoadingOLAPStructureEvent += LoadingOLAPStructure;
+        flexmonster.OnLoadingReportFileEvent += LoadingReportFile;
+        flexmonster.OnLocalizationErrorEvent += LocalizationError;
+        flexmonster.OnLocalizationLoadedEvent += LocalizationLoaded;
+        flexmonster.OnOLAPStructureErrorEvent += OLAPStructureError;
+        flexmonster.OnOLAPStructureLoadedEvent += OLAPStructureLoaded;
+        flexmonster.OnOpeningReportFileEvent += OpeningReportFile;
+        flexmonster.OnPrintCompleteEvent += PrintComplete;
+        flexmonster.OnPrintStartEvent += PrintStart;
+        flexmonster.OnQueryCompleteEvent += QueryComplete;
+        flexmonster.OnQueryErrorEvent += QueryError;
+        flexmonster.OnReadyEvent += Ready;
+        flexmonster.OnReportChangeEvent += ReportChange;
+        flexmonster.OnReportCompleteEvent += ReportComplete;
+        flexmonster.OnReportFileCancelledEvent += ReportFileCancelled;
+        flexmonster.OnReportFileErrorEvent += ReportFileError;
+        flexmonster.OnRunningQueryEvent += RunningQuery;
+        flexmonster.OnUpdateEvent += Update;
+    }
+}

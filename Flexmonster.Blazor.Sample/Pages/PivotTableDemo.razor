@@ -1,0 +1,12 @@
+﻿@page "/"
+@page "/pivot-table-demo"
+<h3 class="page-title">Pivot Table Demo</h3>
+<FlexmonsterComponent Report="@report"
+                      Toolbar=true
+                      Width="100%"
+                      Height=600>
+</FlexmonsterComponent>
+
+@code{
+    string report = "https://cdn.flexmonster.com/github/demo-report.json";
+}

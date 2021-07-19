@@ -1,1 +1,1 @@
-# pivot-blazor
+# Flexmonster Pivot Table & Charts integration with Blazor

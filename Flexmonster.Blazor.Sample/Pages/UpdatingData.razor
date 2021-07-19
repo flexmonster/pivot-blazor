@@ -1,0 +1,77 @@
+﻿@page "/updating-data"
+<h3 class="title-one page-title">
+    <a target="blank" class="title-link" rel="noopener noreferrer" href="https://www.flexmonster.com/api/updatedata/?r=blz">Updating the data</a> in Flexmonster
+</h3>
+
+<button class="button-red" @onclick="UpdateData">Update data</button>
+
+<FlexmonsterComponent @ref="flexmonster"
+                      Toolbar=true
+                      Width="100%"
+                      Height=600
+                      OnReady="@OnReady">
+</FlexmonsterComponent>
+
+@code {
+    private FlexmonsterComponent flexmonster;
+
+    private void UpdateData()
+    {
+        var rnd = new Random();
+        var newData = new object[2] {
+        new {
+           Category="Accessories",
+           Size="262 oz",
+           Color="red",
+           Destination="Australia",
+           BusinessType="Specialty Bike Shop",
+           Country="Australia",
+           Price= Math.Floor(rnd.NextDouble() * 1000),
+           Quantity=225,
+           Discount=23,
+        },
+        new {
+           Category="Components",
+           Size="235 oz",
+           Color="green",
+           Destination="Australia",
+           BusinessType="Warehouse",
+           Country="Australia",
+           Price= Math.Floor(rnd.NextDouble() * 1000),
+           Quantity=1950,
+           Discount=51,
+        }
+    };
+        flexmonster.UpdateData(new DataSource() { Data = newData });
+    }
+
+    private void OnReady()
+    {
+        flexmonster.ConnectTo(new DataSource() { Data = data });
+    }
+
+    private object[] data = new object[2] {
+        new {
+           Category="Accessories",
+           Size="262 oz",
+           Color="red",
+           Destination="Australia",
+           BusinessType="Specialty Bike Shop",
+           Country="Australia",
+           Price=100,
+           Quantity=225,
+           Discount=23,
+        },
+        new {
+           Category="Components",
+           Size="235 oz",
+           Color="green",
+           Destination="Australia",
+           BusinessType="Warehouse",
+           Country="Australia",
+           Price=200,
+           Quantity=1950,
+           Discount=51,
+        }
+    };
+}

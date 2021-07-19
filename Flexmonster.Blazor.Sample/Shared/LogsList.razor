@@ -1,0 +1,22 @@
+﻿<h3 class="event-logs-title">@Title</h3>
+<div class="event-logs-wrapper fullwidth">
+    <div class="content">
+        @foreach (var log in @Logs)
+        {
+            <div class="log">
+                <span class="log-label">[ Event ] @log.Date: </span>
+                @log.Event [ <a class="log-link" target="blank"
+                                href="https://www.flexmonster.com/api/@(log.Event)/?r=blz">see details</a> ]
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public List<Log> Logs { get; set; }
+
+}

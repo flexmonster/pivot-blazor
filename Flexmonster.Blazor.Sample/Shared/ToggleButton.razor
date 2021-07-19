@@ -1,0 +1,40 @@
+﻿<div class="toggle-button noselect" id="@Id" @onclick="OnToggleSwitchClicked">
+    <input class="button-checkbox" id="labelOn" type="checkbox" checked="@isChecked" readOnly />
+    <label class="button-checkbox-label">
+        <span class="on">
+            @if (isChecked)
+            {
+                @LabelChecked
+            }
+            else
+            {
+                @LabelUnchecked
+            }
+        </span>
+    </label>
+</div>
+
+
+@code{
+
+    [Parameter]
+    public string LabelChecked { get; set; }
+
+    [Parameter]
+    public string LabelUnchecked { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> ComponentTriggerFunction { get; set; }
+
+    [Parameter]
+    public string Id { get; set; }
+
+    private bool isChecked;
+
+    private async Task OnToggleSwitchClicked()
+    {
+        isChecked = !isChecked;
+        await ComponentTriggerFunction.InvokeAsync(isChecked);
+    }
+
+}

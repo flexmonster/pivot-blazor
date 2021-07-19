@@ -1,0 +1,48 @@
+﻿@page "/using-api-calls"
+<h3 class="page-title">
+    Using <a target="blank" class="title-link" href="https://www.flexmonster.com/api/methods/?r=blz">Flexmonster API calls</a>
+</h3>
+
+<ToggleSwitch ComponentTriggerFunction="@ControllGridCharts" LabelChecked="Column chart" LabelUnchecked="Grid" />
+<ToggleSwitch ComponentTriggerFunction="@ControllInteractiveness" LabelChecked="Read-only" LabelUnchecked="Interactive" />
+
+<FlexmonsterComponent @ref="flexmonster"
+                      Report="@report"
+                      Toolbar=true
+                      Width="100%"
+                      Height=600>
+</FlexmonsterComponent>
+
+@code {
+    private FlexmonsterComponent flexmonster;
+    string report = "https://cdn.flexmonster.com/github/demo-report.json";
+
+    private void ControllInteractiveness(bool isReadonly)
+    {
+        if (isReadonly)
+        {
+            flexmonster.SetOptions(new Options() { ReadOnly = true });
+            flexmonster.Refresh();
+        }
+        else
+        {
+            flexmonster.SetOptions(new Options() { ReadOnly = false });
+            flexmonster.Refresh();
+        }
+
+    }
+
+    private void ControllGridCharts(bool isGrid)
+    {
+        if (!isGrid)
+        {
+            flexmonster.ShowGrid();
+        }
+        else
+        {
+            flexmonster.ShowCharts();
+        }
+    }
+
+
+}
