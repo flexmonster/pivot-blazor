@@ -23,7 +23,7 @@ To run the sample project with Blazor, you will need Microsoft .NET Core 3.1 or 
 git clone https://github.com/flexmonster/pivot-blazor.git && cd pivot-blazor
 ```
 
-2. Run the sample server from the console:
+2. Run the sample project from the console:
 
 ```
 cd Flexmonster.Blazor.Sample
