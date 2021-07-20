@@ -13,7 +13,7 @@ This repository holds the source code for a simple [Blazor](https://dotnet.micro
 
 ## Prerequisites
 
-To run a sample server with the Data Server as a DLL, you will need Microsoft .NET Core 3.1 or higher. [Get it here](https://dotnet.microsoft.com/download) if it's not yet installed on your machine.
+To run the sample project with Blazor, you will need Microsoft .NET Core 3.1 or higher. [Get it here](https://dotnet.microsoft.com/download) if it's not yet installed on your machine.
 
 ## Installation
 
