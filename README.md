@@ -1,6 +1,6 @@
 # Flexmonster Pivot Table & Charts integration with Blazor
-[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](http://flexmonster.com/?r=rm_blazor)
-Website: [www.flexmonster.com](https://www.flexmonster.com/?r=rm_blazor)
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](http://flexmonster.com/?r=rm_blz)
+Website: [www.flexmonster.com](https://www.flexmonster.com/?r=rm_blz)
 ## Flexmonster Pivot Table & Charts
 
 Flexmonster Pivot is a powerful JavaScript tool for interactive web reporting. It allows you to visualize and analyze data from JSON, CSV, SQL, NoSQL, Elasticsearch, and OLAP data sources quickly and conveniently. Flexmonster is designed to integrate seamlessly with any client-side framework and can be easily embedded into your application.
@@ -34,4 +34,4 @@ To see the result, open `http://localhost:5000/` in your browser.
 
 ## Usage
 
-For details on usage, refer to the [Flexmonster integration with Blazor](https://www.flexmonster.com/doc/integration-with-blazor/?r=rm_blazor) tutorial.
+For details on usage, refer to the [Flexmonster integration with Blazor](https://www.flexmonster.com/doc/integration-with-blazor/?r=rm_blz) tutorial.
