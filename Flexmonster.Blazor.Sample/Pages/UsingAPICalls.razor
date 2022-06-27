@@ -17,30 +17,30 @@
     private FlexmonsterComponent flexmonster;
     string report = "https://cdn.flexmonster.com/github/demo-report.json";
 
-    private void ControllInteractiveness(bool isReadonly)
+    private async Task ControllInteractiveness(bool isReadonly)
     {
         if (isReadonly)
         {
-            flexmonster.SetOptions(new Options() { ReadOnly = true });
-            flexmonster.Refresh();
+            await flexmonster.SetOptions(new Options() { ReadOnly = true });
+            await flexmonster.Refresh();
         }
         else
         {
-            flexmonster.SetOptions(new Options() { ReadOnly = false });
-            flexmonster.Refresh();
+            await flexmonster.SetOptions(new Options() { ReadOnly = false });
+            await flexmonster.Refresh();
         }
 
     }
 
-    private void ControllGridCharts(bool isGrid)
+    private async Task ControllGridCharts(bool isGrid)
     {
         if (!isGrid)
         {
-            flexmonster.ShowGrid();
+           await  flexmonster.ShowGrid();
         }
         else
         {
-            flexmonster.ShowCharts();
+            await flexmonster.ShowCharts();
         }
     }
 

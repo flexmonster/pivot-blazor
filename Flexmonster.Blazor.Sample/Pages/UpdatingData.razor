@@ -15,7 +15,7 @@
 @code {
     private FlexmonsterComponent flexmonster;
 
-    private void UpdateData()
+    private async Task UpdateData()
     {
         var rnd = new Random();
         var newData = new object[2] {
@@ -42,12 +42,12 @@
            Discount=51,
         }
     };
-        flexmonster.UpdateData(new DataSource() { Data = newData });
+        await flexmonster.UpdateData(new DataSource() { Data = newData });
     }
 
-    private void OnReady()
+    private async Task OnReady()
     {
-        flexmonster.ConnectTo(new DataSource() { Data = data });
+        await flexmonster.ConnectTo(new DataSource() { Data = data });
     }
 
     private object[] data = new object[2] {

@@ -27,7 +27,7 @@
     <LogsList Title="Log output" @ref="logsList" Logs="@logs" />
     <button class="button-red" @onclick="ClearLogs">Clear Log Output</button>
 </div>
-@code{
+@code {
     private FlexmonsterComponent flexmonster;
     private LogsList logsList;
     private List<Log> logs;
@@ -56,45 +56,45 @@
         }
     }
 
-    void AfterChartDraw() { PrintLog("afterchartdraw"); }
-    void AfterGridDraw(GridDrawParams param) { PrintLog("aftergriddraw"); }
-    void BeforeGridDraw(GridDrawParams param) { PrintLog("beforegriddraw"); }
-    void BeforeToolbarCreated(object param) { PrintLog("beforetoolbarcreated"); }
-    void CellClick(CellData param) { PrintLog("cellclick"); }
-    void CellDoubleClick(CellData param) { PrintLog("celldoubleclick"); }
-    void ChartClick(ChartData param) { PrintLog("chartclick"); }
-    void DataChanged(DataChangedParams param) { PrintLog("datachanged"); }
-    void DataError(DataErrorParams param) { PrintLog("dataerror"); }
-    void DataFileCancelled() { PrintLog("datafilecancelled"); }
-    void DataLoaded() { PrintLog("dataloaded"); }
-    void DrillthroughClose() { PrintLog("drillthroughclose"); }
-    void DrillthroughOpen(object param) { PrintLog("drillthroughopen"); }
-    void ExportComplete() { PrintLog("exportcomplete"); }
-    void ExportStart() { PrintLog("exportstart"); }
-    void FieldsListClose() { PrintLog("fieldslistclose"); }
-    void FieldsListOpen() { PrintLog("fieldslistopen"); }
-    void FilterClose() { PrintLog("filterclose"); }
-    void FilterOpen(FilterOpenParams param) { PrintLog("filteropen"); }
-    void LoadingData() { PrintLog("loadingdata"); }
-    void LoadingLocalization() { PrintLog("loadinglocalization"); }
-    void LoadingOLAPStructure() { PrintLog("loadingolapstructure"); }
-    void LoadingReportFile() { PrintLog("loadingreportfile"); }
-    void LocalizationError() { PrintLog("localizationerror"); }
-    void LocalizationLoaded() { PrintLog("localizationloaded"); }
-    void OLAPStructureError() { PrintLog("olapstructureerror"); }
-    void OLAPStructureLoaded() { PrintLog("olapstructureloaded"); }
-    void OpeningReportFile() { PrintLog("openingreportfile"); }
-    void PrintComplete() { PrintLog("printcomplete"); }
-    void PrintStart() { PrintLog("printstart"); }
-    void QueryComplete() { PrintLog("querycomplete"); }
-    void QueryError() { PrintLog("queryerror"); }
-    void Ready() { PrintLog("ready"); }
-    void ReportChange() { PrintLog("reportchange"); }
-    void ReportComplete() { PrintLog("reportcomplete"); }
-    void ReportFileCancelled() { PrintLog("reportfilecancelled"); }
-    void ReportFileError() { PrintLog("reportfileerror"); }
-    void RunningQuery() { PrintLog("runningquery"); }
-    void Update() { PrintLog("update"); }
+    async Task AfterChartDraw() { await Task.Run(() => { PrintLog("afterchartdraw"); }); }
+    async Task AfterGridDraw(GridDrawParams param) { await Task.Run(() => { PrintLog("aftergriddraw"); }); }
+    async Task BeforeGridDraw(GridDrawParams param) { await Task.Run(() => { PrintLog("beforegriddraw"); }); }
+    async Task BeforeToolbarCreated(object param) { await Task.Run(() => { PrintLog("beforetoolbarcreated"); }); }
+    async Task CellClick(CellData param) { await Task.Run(() => { PrintLog("cellclick"); }); }
+    async Task CellDoubleClick(CellData param) { await Task.Run(() => { PrintLog("celldoubleclick"); }); }
+    async Task ChartClick(ChartData param) { await Task.Run(() => { PrintLog("chartclick"); }); }
+    async Task DataChanged(DataChangedParams param) { await Task.Run(() => { PrintLog("datachanged"); }); }
+    async Task DataError(DataErrorParams param) { await Task.Run(() => { PrintLog("dataerror"); }); }
+    async Task DataFileCancelled() { await Task.Run(() => { PrintLog("datafilecancelled"); }); }
+    async Task DataLoaded() { await Task.Run(() => { PrintLog("dataloaded"); }); }
+    async Task DrillthroughClose() { await Task.Run(() => { PrintLog("drillthroughclose"); }); }
+    async Task DrillthroughOpen(object param) { await Task.Run(() => { PrintLog("drillthroughopen"); }); }
+    async Task ExportComplete() { await Task.Run(() => { PrintLog("exportcomplete"); }); }
+    async Task ExportStart() { await Task.Run(() => { PrintLog("exportstart"); }); }
+    async Task FieldsListClose() { await Task.Run(() => { PrintLog("fieldslistclose"); }); }
+    async Task FieldsListOpen() { await Task.Run(() => { PrintLog("fieldslistopen"); }); }
+    async Task FilterClose() { await Task.Run(() => { PrintLog("filterclose"); }); }
+    async Task FilterOpen(FilterOpenParams param) { await Task.Run(() => { PrintLog("filteropen"); }); }
+    async Task LoadingData() { await Task.Run(() => { PrintLog("loadingdata"); }); }
+    async Task LoadingLocalization() { await Task.Run(() => { PrintLog("loadinglocalization"); }); }
+    async Task LoadingOLAPStructure() { await Task.Run(() => { PrintLog("loadingolapstructure"); }); }
+    async Task LoadingReportFile() { await Task.Run(() => { PrintLog("loadingreportfile"); }); }
+    async Task LocalizationError() { await Task.Run(() => { PrintLog("localizationerror"); }); }
+    async Task LocalizationLoaded() { await Task.Run(() => { PrintLog("localizationloaded"); }); }
+    async Task OLAPStructureError() { await Task.Run(() => { PrintLog("olapstructureerror"); }); }
+    async Task OLAPStructureLoaded() { await Task.Run(() => { PrintLog("olapstructureloaded"); }); }
+    async Task OpeningReportFile() { await Task.Run(() => { PrintLog("openingreportfile"); }); }
+    async Task PrintComplete() { await Task.Run(() => { PrintLog("printcomplete"); }); }
+    async Task PrintStart() { await Task.Run(() => { PrintLog("printstart"); }); }
+    async Task QueryComplete() { await Task.Run(() => { PrintLog("querycomplete"); }); }
+    async Task QueryError() { await Task.Run(() => { PrintLog("queryerror"); }); }
+    async Task Ready() { await Task.Run(() => { PrintLog("ready"); }); }
+    async Task ReportChange() { await Task.Run(() => { PrintLog("reportchange"); }); }
+    async Task ReportComplete() { await Task.Run(() => { PrintLog("reportcomplete"); }); }
+    async Task ReportFileCancelled() { await Task.Run(() => { PrintLog("reportfilecancelled"); }); }
+    async Task ReportFileError() { await Task.Run(() => { PrintLog("reportfileerror"); }); }
+    async Task RunningQuery() { await Task.Run(() => { PrintLog("runningquery"); }); }
+    async Task Update() { await Task.Run(() => { PrintLog("update"); }); }
 
 
 
