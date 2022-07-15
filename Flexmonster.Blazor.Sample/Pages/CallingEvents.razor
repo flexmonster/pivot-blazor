@@ -1,7 +1,6 @@
 ﻿@page "/calling-events"
-<h3 class="title-one page-title">
-    Calling <a target="blank" class="title-link" href="https://www.flexmonster.com/api/events/?r=rm_blz">Flexmonster events</a>
-</h3>
+
+<h1 class="title-one page-title">Calling Flexmonster events</h1>
 
 <div class="description-blocks first-description-block">
     <p>
@@ -24,7 +23,7 @@
 </FlexmonsterComponent>
 
 <div class="section">
-    <LogsList Title="Log output" @ref="logsList" Logs="@logs" />
+    <LogsList Title="Log Output" @ref="logsList" Logs="@logs" />
     <button class="button-red" @onclick="ClearLogs">Clear Log Output</button>
 </div>
 @code {

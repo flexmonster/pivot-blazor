@@ -1,10 +1,23 @@
 ﻿@page "/using-api-calls"
-<h3 class="page-title">
-    Using <a target="blank" class="title-link" href="https://www.flexmonster.com/api/methods/?r=rm_blz">Flexmonster API calls</a>
-</h3>
 
-<ToggleSwitch ComponentTriggerFunction="@ControllGridCharts" LabelChecked="Column chart" LabelUnchecked="Grid" />
-<ToggleSwitch ComponentTriggerFunction="@ControllInteractiveness" LabelChecked="Read-only" LabelUnchecked="Interactive" />
+<h1 class="page-title">Using Flexmonster API calls</h1>
+
+<div class="description-blocks first-description-block">
+    <p>
+        Flexmonster provides
+        <a href="https://www.flexmonster.com/api/methods/?r=rm_blz"
+           target="_blank"
+           class="title-link">API calls</a>
+        for interacting with the component. As an example, we've added the
+        toggle buttons below. Use them to switch between the views or make
+        Flexmonster read-only.
+    </p>
+</div>
+
+<div class="description-blocks">
+    <ToggleSwitch ComponentTriggerFunction="@ControllGridCharts" LabelChecked="Column chart" LabelUnchecked="Grid" />
+    <ToggleSwitch ComponentTriggerFunction="@ControllInteractiveness" LabelChecked="Read-only" LabelUnchecked="Interactive" />
+</div>
 
 <FlexmonsterComponent @ref="flexmonster"
                       Report="@report"
