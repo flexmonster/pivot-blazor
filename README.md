@@ -5,7 +5,7 @@ Website: [www.flexmonster.com](https://www.flexmonster.com/?r=gh_blz)
 
 Flexmonster Pivot is a powerful JavaScript tool for interactive web reporting. It allows you to visualize and analyze data from JSON, CSV, SQL, NoSQL, Elasticsearch, and OLAP data sources quickly and conveniently. Flexmonster is designed to integrate seamlessly with any client-side framework and can be easily embedded into your application.
 
-This repository contains a sample [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) project for Flexmonster Pivot Table & Charts.
+This repository contains a sample [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) project for Flexmonster Pivot Table & Charts.
 
 Table of contents:
 
@@ -15,7 +15,7 @@ Table of contents:
 
 ## Prerequisites
 
-- [Microsoft .NET Core 3.1 or later](https://dotnet.microsoft.com/download)
+- [Microsoft .NET Core 3.1 or later](https://dotnet.microsoft.com/en-us/download)
 
 ## Installation
 
