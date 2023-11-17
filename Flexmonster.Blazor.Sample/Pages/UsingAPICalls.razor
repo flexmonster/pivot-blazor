@@ -31,10 +31,10 @@
     string report = "https://cdn.flexmonster.com/github/demo-report.json";
 
      private async Task ControllInteractiveness(bool isReadonly)
-    {
+     {
             await flexmonster.SetOptions(new Options() { ReadOnly = isReadonly });
             await flexmonster.Refresh();
-    }
+     }
 
     private async Task ControllGridCharts(bool isGrid)
     {
