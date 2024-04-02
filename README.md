@@ -45,7 +45,7 @@ To see the result, open `http://localhost:5000/` in your browser.
 
 Blazor sample project contains several examples of Flexmonster Pivot usage and customization:
 
-- **Pivot table demo** shows how to define the Report, Toolbar, Width, and Height initialization parameters. 
+- **Pivot table demo** shows how to define the `Report`, `Toolbar`, `Width`, and `Height` initialization parameters. 
 - **Handling events** demonstrates how to subscribe to events and unsubscribe from them. 
 - **Using API calls** illustrates how to use Flexmonster's methods. 
 - **Updating data** is an example of using the `updateData()` method.
