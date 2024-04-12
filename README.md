@@ -55,6 +55,7 @@ You can try all of these examples right from the project’s starting page.
 ## Related Flexmonster docs
 
 - [Integration with Blazor](https://www.flexmonster.com/doc/integration-with-blazor/?r=sample_blz) — learn how to integrate Flexmonster into a Blazor project.
+- [Usage examples in Blazor](https://www.flexmonster.com/doc/usage-examples-blazor/?r=sample_blz) — see details on Flexmonster usage.
 
 ## Support and feedback
 
