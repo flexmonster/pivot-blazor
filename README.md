@@ -1,5 +1,5 @@
 # Blazor pivot table | Flexmonster Pivot Table & Charts sample project with Blazor
-[![Flexmonster Pivot Table & Charts](https://static.flexmonster.com/uploads/2023/07/19212429/blazor-2.png)](https://www.flexmonster.com?r=sample_blz)
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/readmes/blazor.webp)](https://www.flexmonster.com?r=sample_blz)
 Website: [flexmonster.com](https://www.flexmonster.com?r=sample_blz)
 
 [![Github Stars](https://img.shields.io/github/stars/flexmonster?style=social)](https://github.com/flexmonster) [![Twitter](https://img.shields.io/twitter/follow/Flexmonster?style=social)](https://twitter.com/Flexmonster)
