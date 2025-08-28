@@ -6,7 +6,7 @@ Website: [flexmonster.com](https://www.flexmonster.com?r=sample_blz)
  
 ## Flexmonster Pivot Table & Charts
 
-Flexmonster Pivot Table & Charts is a powerful and fully customizable JavaScript component for web reporting. It is packed with all core features for data analysis and can easily become a part of your Blazor data visualization project. The tool supports popular frameworks like Angular, React, Vue, Blazor, and [more](https://www.flexmonster.com/doc/available-tutorials-integration?r=sample_blz). Also, Flexmonster connects to any data source, including SQL and NoSQL databases, JSON and CSV files, OLAP cubes, and Elasticsearch. 
+Flexmonster Pivot Table & Charts is a powerful and fully customizable JavaScript component for web reporting. It is packed with all core features for data analysis and can easily become a part of your Blazor data visualization project. The tool supports popular frameworks like React, Vue, Angular, Blazor, and [more](https://www.flexmonster.com/doc/available-tutorials-integration?r=sample_blz). Also, Flexmonster connects to [any data source](https://www.flexmonster.com/doc/supported-data-sources?r=sample_blz), including SQL and NoSQL databases, JSON and CSV files, OLAP cubes, and Elasticsearch. 
 
 This repository contains a sample [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) project for Flexmonster Pivot Table & Charts.
 
@@ -45,32 +45,32 @@ To see the result, open `http://localhost:5000/` in your browser.
 
 Blazor sample project contains several examples of Flexmonster Pivot usage and customization:
 
-- **Pivot table demo** shows how to define the `Report`, `Toolbar`, `Width`, and `Height` initialization parameters. 
-- **Handling events** demonstrates how to subscribe to events and unsubscribe from them. 
-- **Using API calls** illustrates how to use Flexmonster's methods. 
-- **Updating data** is an example of using the `updateData()` method.
+- Pivot table demo shows how to define the `Report`, `Toolbar`, and other initialization parameters in the pivot grid for Blazor.
+- Handling events demonstrates how to subscribe to events and unsubscribe from them. 
+- Using API calls illustrates how to use Flexmonster's methods. 
+- Updating data is an example of refreshing data at runtime using the `updateData()` method.
   
 You can try all of these examples right from the project’s starting page.
 
 ## Related Flexmonster docs
 
 - [Integration with Blazor](https://www.flexmonster.com/doc/integration-with-blazor/?r=sample_blz) — learn how to integrate Flexmonster into a Blazor project.
-- [Usage examples in Blazor](https://www.flexmonster.com/doc/usage-examples-blazor/?r=sample_blz) — see details on Flexmonster usage.
+- [Usage examples in Blazor](https://www.flexmonster.com/doc/usage-examples-blazor/?r=sample_blz) — see details on Flexmonster usage in Blazor.
 
 ## Support and feedback
 
-In case of any issues, visit our [troubleshooting section](https://www.flexmonster.com/doc/typical-errors?r=sample_blz). You can also search among the [resolved cases](https://www.flexmonster.com/technical-support?r=sample_blz) for a solution to your problem.
+In case of any issues, visit our [Troubleshooting](https://www.flexmonster.com/doc/typical-errors?r=sample_blz) section. You can also search among the [resolved cases](https://www.flexmonster.com/technical-support?r=sample_blz) for a solution to your issue.
 
-To share your feedback or ask questions, contact our Tech team by raising a ticket on [Flexmonster Help Center](https://www.flexmonster.com/help-center?r=sample_blz). You can also find a list of samples, technical specifications, and a user interface guide there.
+To share your feedback or ask questions, contact our Tech team by raising a ticket on our [Help Center](https://www.flexmonster.com/help-center?r=sample_blz). You can also find a list of samples, technical specifications, and a user interface guide there.
 
 ## Flexmonster licensing
 
-This sample project uses [Flexmonster Blazor wrapper](https://github.com/flexmonster/flexmonster-blazor), which is released as an MIT-licensed (free and open-source) add-on to Flexmonster Pivot.
+This sample project uses the [Flexmonster Blazor wrapper](https://github.com/flexmonster/flexmonster-blazor), which is released as an MIT-licensed (free and open-source) add-on to Flexmonster Pivot.
 
 To learn about Flexmonster Pivot licenses, visit the [Flexmonster licensing page](https://www.flexmonster.com/pivot-table-editions-and-pricing?r=sample_blz). 
 If you want to test our product, we provide a 30-day free trial.
 
-If you need any help with your license — fill out our [Contact form](https://www.flexmonster.com/contact-our-team?r=sample_blz), and we will get in touch with you.
+If you need any help with your license, fill out our [Contact form](https://www.flexmonster.com/contact-our-team?r=sample_blz), and we will get in touch with you.
 
 ## Social media
 
