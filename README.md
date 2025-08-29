@@ -35,8 +35,7 @@ git clone https://github.com/flexmonster/pivot-blazor.git && cd pivot-blazor
 2. Run the sample project from the console:
 
 ```
-cd Flexmonster.Blazor.Sample
-dotnet run
+cd Flexmonster.Blazor.Sample && dotnet run
 ``` 
 
 To see the result, open `http://localhost:5000/` in your browser.
