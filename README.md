@@ -32,7 +32,7 @@ Table of contents:
 git clone https://github.com/flexmonster/pivot-blazor.git && cd pivot-blazor
 ```
 
-2. Run the sample project from the console:
+2. Run the sample project:
 
 ```
 cd Flexmonster.Blazor.Sample && dotnet run
